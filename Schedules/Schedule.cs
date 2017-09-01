@@ -7,7 +7,7 @@ namespace Schedules
     {
         private readonly IDateTimeNow _dateTimeNow;
 
-        public Schedule(IRecurrence recurrence, IDateTimeNow dateTimeNow)
+        internal Schedule(IRecurrence recurrence, IDateTimeNow dateTimeNow)
         {
             Recurrence = recurrence;
             _dateTimeNow = dateTimeNow;
