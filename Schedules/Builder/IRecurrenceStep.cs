@@ -6,6 +6,6 @@ namespace Schedules.Builder
     {
         IRecurrenceStep WithDateTimeNow(IDateTimeNow dateTimeNow);
         IBuildableSchedule WithSingleRecurrence();
-        IBuildableSchedule WithDailyRecurrence(RecurrenceDays recurrenceDays);
+        IBuildableSchedule WithWeeklyRecurrence(RecurrenceDays recurrenceDays);
     }
 }

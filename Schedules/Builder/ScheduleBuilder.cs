@@ -30,9 +30,9 @@ namespace Schedules.Builder
             return this;
         }
 
-        public IBuildableSchedule WithDailyRecurrence(RecurrenceDays recurrenceDays)
+        public IBuildableSchedule WithWeeklyRecurrence(RecurrenceDays recurrenceDays)
         {
-            _recurrence = new DailyRecurrence(_startDate, recurrenceDays);
+            _recurrence = new WeeklyRecurrence(_startDate, recurrenceDays);
             return this;
         }
 

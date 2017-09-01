@@ -6,7 +6,7 @@ using Xunit;
 
 namespace Schedules.Tests
 {
-    public class SchedulesWithDailyRecurrenceShould
+    public class SchedulesWithWeeklyRecurrenceShould
     {
         [Theory]
         [InlineData(RecurrenceDays.Monday, 8, 28)]
@@ -26,7 +26,7 @@ namespace Schedules.Tests
             var schedule = ScheduleBuilder
                 .Starting(startDate)
                 .WithDateTimeNow(new FakeDateTimeNow(fakeNow))
-                .WithDailyRecurrence(recurrenceDays)
+                .WithWeeklyRecurrence(recurrenceDays)
                 .Build();
 
             var dates = schedule.GetNextOccurrences().ToArray();
@@ -43,7 +43,7 @@ namespace Schedules.Tests
             var schedule = ScheduleBuilder
                 .Starting(startDate)
                 .WithDateTimeNow(new FakeDateTimeNow(fakeNow))
-                .WithDailyRecurrence(RecurrenceDays.Wednesday | RecurrenceDays.Friday)
+                .WithWeeklyRecurrence(RecurrenceDays.Wednesday | RecurrenceDays.Friday)
                 .Build();
 
             var dates = schedule.GetNextOccurrences(6).ToArray();
@@ -68,7 +68,7 @@ namespace Schedules.Tests
             var schedule = ScheduleBuilder
                 .Starting(startDate)
                 .WithDateTimeNow(new FakeDateTimeNow(fakeNow))
-                .WithDailyRecurrence(RecurrenceDays.Everyday)
+                .WithWeeklyRecurrence(RecurrenceDays.Everyday)
                 .Build();
 
             var dates = schedule.GetNextOccurrences().ToArray();
@@ -85,7 +85,7 @@ namespace Schedules.Tests
             var schedule = ScheduleBuilder
                 .Starting(startDate)
                 .WithDateTimeNow(new FakeDateTimeNow(fakeNow))
-                .WithDailyRecurrence(RecurrenceDays.Everyday)
+                .WithWeeklyRecurrence(RecurrenceDays.Everyday)
                 .Build();
 
             var dates = schedule.GetNextOccurrences().ToArray();

@@ -3,12 +3,12 @@ using System.Collections.Generic;
 
 namespace Schedules
 {
-    public class DailyRecurrence : IRecurrence
+    public class WeeklyRecurrence : IRecurrence
     {
         private readonly DateTime _startDate;
         private readonly RecurrenceDays _recurrenceDays;
 
-        public DailyRecurrence(DateTime startDate, RecurrenceDays recurrenceDays)
+        public WeeklyRecurrence(DateTime startDate, RecurrenceDays recurrenceDays)
         {
             _startDate = startDate;
             _recurrenceDays = recurrenceDays;
